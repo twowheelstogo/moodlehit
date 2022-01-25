@@ -1,5 +1,5 @@
 <?php  // Moodle configuration file
-
+//Hola
 unset($CFG);
 global $CFG;
 $CFG = new stdClass();
