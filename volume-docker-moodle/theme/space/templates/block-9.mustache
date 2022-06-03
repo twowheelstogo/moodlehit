@@ -20,13 +20,13 @@
   <div class="c-hero {{#herofwenabled}}c-hero--fw {{/herofwenabled}} {{#heroimgonly}}c-hero-img{{/heroimgonly}} {{^herofwenabled}}l-container{{/herofwenabled}} row no-gutters justify-content-center align-items-center" {{^heroimgonly}}style="background-image: url({{{ heroimg }}});"{{/heroimgonly}}>
     {{^heroimgonly}}
       {{^herohtml}}
-      <div class="c-hero-content col-sm-11 col-lg-7 text-center">
+      <div class="c-hero-content col-sm-11 col-lg-7 text-center" style="padding-top: 150px;">
 
         {{#HeroText2}}<h5 class="h5">{{{HeroText2}}}</h5>{{/HeroText2}}
         {{#HeroHeading}}<h1 class="h1">{{{HeroHeading}}}</h1>{{/HeroHeading}}
         {{#HeroText}}<h3 class="h3">{{{HeroText}}}</h3>{{/HeroText}}
 
-        <div class="row mt-5 justify-content-center">
+        <div class="row mt-5 justify-content-center" >
           {{#HeroURL}}<a href="{{HeroURL}}" class="my-2 mr-2 ml-2 btn btn-cta btn-cta--primary">{{{HeroLabel}}}</a>{{/HeroURL}}
           {{#HeroURL2}}<a href="{{HeroURL2}}" class="my-2 mr-2 ml-2 btn btn-cta btn-cta--secondary">{{{HeroLabel2}}}</a>{{/HeroURL2}}
         </div>

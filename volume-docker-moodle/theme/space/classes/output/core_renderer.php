@@ -373,7 +373,7 @@ class core_renderer extends \core_renderer {
         // If not logged in, show the typical not-logged-in string.
         if (!isloggedin()) {
             if (!$loginpage) {
-                $returnstr .= "<a class=\"login-btn\" href=\"$loginurl\">" . get_string('login') . '<i class="ml-2 icon fas fa-sign-in-alt"></i></a>';
+                $returnstr .=  "<a class=\"login-btn\" href=\"$loginurl\">" . ' <i class=" icon fas fa-user fa-fw"></i> '. get_string('login') . "</a>";
             }
             return html_writer::div(
                 html_writer::span(

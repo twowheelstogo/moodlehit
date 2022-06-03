@@ -1,5 +1,4 @@
 <?php  // Moodle configuration file
-//Hola como estas
 
 unset($CFG);
 global $CFG;

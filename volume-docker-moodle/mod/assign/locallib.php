@@ -8945,7 +8945,10 @@ class assign {
                 if ($gradebookplugin) {
                     $grade = $this->get_user_grade($result->userid, false);
                     if ($grade) {
-                        $gradebookgrade->feedback = $gradebookplugin->text_for_gradebook($grade);
+                        $feedbacktext = $gradebookplugin->text_for_gradebook($grade);
+                        if (!empty($feedbacktext)) {
+                            $gradebookgrade->feedback = $feedbacktext;
+                        }
                         $gradebookgrade->feedbackformat = $gradebookplugin->format_for_gradebook($grade);
                         $gradebookgrade->feedbackfiles = $gradebookplugin->files_for_gradebook($grade);
                     }
@@ -9855,7 +9858,7 @@ function move_group_override($id, $move, $assignid) {
     global $DB;
 
     // Get the override object.
-    if (!$override = $DB->get_record('assign_overrides', ['id' => $id], 'id, sortorder, groupid')) {
+    if (!$override = $DB->get_record('assign_overrides', ['id' => $id, 'assignid' => $assignid], 'id, sortorder, groupid')) {
         return false;
     }
     // Count the number of group overrides.
@@ -9884,8 +9887,8 @@ function move_group_override($id, $move, $assignid) {
 
         // Delete cache for the 2 records we updated above.
         $cache = cache::make('mod_assign', 'overrides');
-        $cache->delete("{$override->assignid}_g_{$override->groupid}");
-        $cache->delete("{$swapoverride->assignid}_g_{$swapoverride->groupid}");
+        $cache->delete("{$assignid}_g_{$override->groupid}");
+        $cache->delete("{$assignid}_g_{$swapoverride->groupid}");
     }
 
     reorder_group_overrides($assignid);

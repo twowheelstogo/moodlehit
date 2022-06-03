@@ -413,7 +413,7 @@ class course_renderer extends \core_course_renderer {
                 $file->get_filearea(). $file->get_filepath(). $file->get_filename(), !$isimage);
            if ($isimage) {
                 $content .= html_writer::start_tag('a', array('class' => 'col-12 align-self-start p-0', 'href' => $courselink));
-                    $content .= html_writer::start_tag('div', array('class' => 'card-img-top myoverviewimg courseimage', 'style' => 'background-image: url(' . $url . ');'));
+                    $content .= html_writer::start_tag('div', array('class' => 'card-img-top myoverviewimg courseimage', 'style' => 'background-image: url(' . $url . '); border-radius: 30% 0 30% 0;'));
                     $content .= html_writer::end_tag('div');
                 $content .= html_writer::end_tag('a');
             }
@@ -423,7 +423,7 @@ class course_renderer extends \core_course_renderer {
         if (empty($content)) {
             $url = $CFG->wwwroot . "/theme/space/pix/default_course.jpg";
             $content .= html_writer::start_tag('a', array('class' => 'col-12 align-self-start p-0', 'href' => $courselink));
-                $content .= html_writer::start_tag('div', array('class' => 'card-img-top myoverviewimg courseimage', 'style' => 'background-image: url(' . $url . ');'));
+                $content .= html_writer::start_tag('div', array('class' => 'card-img-top myoverviewimg courseimage', 'style' => 'background-image: url(' . $url . '); border-radius: 30% 0 30% 0;'));
                 $content .= html_writer::end_tag('div');
             $content .= html_writer::end_tag('a');
 

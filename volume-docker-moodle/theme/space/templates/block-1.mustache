@@ -18,10 +18,15 @@
 <div id="block1" class="s-block-1 l-container s-special-box section-padding row no-gutters justify-content-sm-center justify-content-lg-between">
 
  {{#ShowFPBlock1Intro}}
-  <div class="{{FPHTMLBlock1IntroProperties}} {{^FPHTMLBlock1IntroProperties}}col-sm-11 col-md-8 col-lg-6 m-auto text-center{{/FPHTMLBlock1IntroProperties}}">
+ <div class="col-sm-11 col-md-8 col-lg-10 m-auto text-center">
+  <img src="https://firebasestorage.googleapis.com/v0/b/twowheelsprototype.appspot.com/o/Screenshot%20from%202022-05-31%2014-06-11.png?alt=media&token=772e01b3-dd49-481b-9cd4-21bad691de9a" alt="Forest" width="60" height="60">
+   <div class="{{FPHTMLBlock1IntroProperties}} {{^FPHTMLBlock1IntroProperties}}  {{/FPHTMLBlock1IntroProperties}}">
     {{#FPBlock1Title}}<h2 class="c-special-box-title">{{{FPBlock1Title}}}</h2>{{/FPBlock1Title}}
     {{#FPBlock1Content}}<div class="lead mb-3">{{{FPBlock1Content}}}</div>{{/FPBlock1Content}}
   </div>
+ </div>
+
+ 
  {{/ShowFPBlock1Intro}}
 
   <div class="col-12 row no-gutters justify-content-sm-center justify-content-md-start py-0 px-1">
@@ -29,8 +34,8 @@
     <div id="block1-{{FPHTMLBlock1Count}}" class="{{FPHTMLBlock1ItemProperties}} {{^FPHTMLBlock1ItemProperties}}col-sm-11 col-md-6 col-lg-4{{/FPHTMLBlock1ItemProperties}}">
       <div {{^FPHTMLBlock1ItemBlockProperties}}class="p-3 m-3"{{/FPHTMLBlock1ItemBlockProperties}} {{{FPHTMLBlock1ItemBlockProperties}}}>
         {{#image}}<img src="{{{image}}}" alt="{{FPHTMLBlock1Heading}}" class="img-fluid"/>{{/image}}
-        {{^image}}{{#FPHTMLBlock1Icon}}<div class="c-special-box-icon">{{{FPHTMLBlock1Icon}}}</div>{{/FPHTMLBlock1Icon}}{{/image}}
-        {{#FPHTMLBlock1Heading}}<h3 class="c-block1-title">{{{FPHTMLBlock1Heading}}}</h3>{{/FPHTMLBlock1Heading}}
+        {{^image}}{{#FPHTMLBlock1Icon}}<div class="c-special-box-icon" style="text-align: center;">{{{FPHTMLBlock1Icon}}}</div>{{/FPHTMLBlock1Icon}}{{/image}}
+        {{#FPHTMLBlock1Heading}}<h3 class="c-block1-title" style="text-align: center;" >{{{FPHTMLBlock1Heading}}}</h3>{{/FPHTMLBlock1Heading}}
         {{#FPHTMLBlock1Text}}<div class="c-special-box-desc">{{{FPHTMLBlock1Text}}}</div>{{/FPHTMLBlock1Text}}
       </div>
     </div>

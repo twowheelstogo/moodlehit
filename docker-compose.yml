@@ -25,7 +25,8 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
       - BITNAMI_DEBUG=true
     volumes:
-      - 'moodle_data:/bitnami/moodle'
+     # - 'moodle_data:/bitnami/moodle'
+      - './volume-docker-moodle:/bitnami/moodle'
       - 'moodledata_data:/bitnami/moodledata'
     depends_on:
       - mariadb
